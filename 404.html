@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Страница не найдена — клиника МЕДИКА</title>
+<meta name="robots" content="noindex">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="/assets/css/style.css">
+<style>
+  .e404 { padding: 72px 0 96px; text-align: center; }
+  .e404__code {
+    font-size: clamp(5rem, 14vw, 9rem);
+    font-weight: 700;
+    line-height: 0.9;
+    letter-spacing: -0.05em;
+    background: linear-gradient(180deg, #dfeaf4, #f7fafc);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    margin-bottom: 8px;
+  }
+  .e404 h1 { margin-bottom: 14px; }
+  .e404__lead { color: var(--ink-2); max-width: 34em; margin: 0 auto 28px; }
+  .e404__actions { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; margin-bottom: 56px; }
+  .e404__links { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; text-align: left; }
+  .e404__link {
+    display: block; padding: 18px 20px; border: 1px solid var(--line);
+    border-radius: 14px; background: #fff; transition: all .2s var(--ease);
+  }
+  .e404__link:hover { border-color: #c6d8e6; box-shadow: var(--shadow-s); transform: translateY(-2px); }
+  .e404__link b { display: block; font-size: .9375rem; margin-bottom: 2px; }
+  .e404__link span { font-size: .75rem; color: var(--muted); }
+  @media (max-width: 720px) { .e404__links { grid-template-columns: 1fr 1fr; } .e404 { padding: 40px 0 64px; } }
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <symbol id="i-logo" viewBox="0 0 24 24"><path d="M9.6 3.5h4.8v5.3h5.1v4.8h-5.1v6.9H9.6v-6.9H4.5V8.8h5.1z"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24"><path d="M21 16.9v2.6a2 2 0 0 1-2.2 2 19.6 19.6 0 0 1-8.5-3 19.3 19.3 0 0 1-6-6A19.6 19.6 0 0 1 1.3 4a2 2 0 0 1 2-2.2h2.6a2 2 0 0 1 2 1.7c.1 1 .4 2 .7 2.9a2 2 0 0 1-.5 2.1L7 9.7a15.9 15.9 0 0 0 6 6l1.2-1.2a2 2 0 0 1 2.1-.4c.9.3 1.9.6 2.9.7a2 2 0 0 1 1.8 2z" transform="translate(0 1)"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15.5 14"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><line x1="4" y1="12" x2="19" y2="12"/><polyline points="13 6 19 12 13 18"/></symbol>
+</svg>
+
+<div class="topbar">
+  <div class="container topbar__inner">
+    <span class="topbar__item"><svg><use href="#i-pin"/></svg> Москва, 4 филиала</span>
+    <span class="topbar__item topbar__item--hide"><svg><use href="#i-clock"/></svg> Ежедневно 8:00–22:00</span>
+    <span class="topbar__spacer"></span>
+    <a href="tel:+74951204567">+7 (495) 120-45-67</a>
+    <span class="topbar__item topbar__lic topbar__item--hide">Лицензия ЛО-77-01-019283</span>
+  </div>
+</div>
+
+<header class="header" id="header">
+  <div class="container header__inner">
+    <a class="logo" href="/index.html" aria-label="МЕДИКА — на главную">
+      <span class="logo__mark"><svg><use href="#i-logo"/></svg></span>
+      <span class="logo__text">
+        <span class="logo__name">МЕДИКА</span>
+        <span class="logo__tag">клиника семейной медицины</span>
+      </span>
+    </a>
+    <nav class="nav" id="nav" aria-label="Основная навигация">
+      <a class="nav__link" href="/index.html">Главная</a>
+      <a class="nav__link" href="/services.html">Услуги</a>
+      <a class="nav__link" href="/doctors.html">Врачи</a>
+      <a class="nav__link" href="/telemedicine.html">Телемедицина</a>
+      <a class="nav__link" href="/library.html">Библиотека</a>
+      <a class="nav__link" href="/contacts.html">Контакты</a>
+    </nav>
+    <div class="header__actions">
+      <div class="header__phone">
+        <span>Запись 24/7</span>
+        <a href="tel:+74951204567">+7 (495) 120-45-67</a>
+      </div>
+      <a class="header__account" href="/account.html" aria-label="Личный кабинет" title="Личный кабинет"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 21v-1.6a5 5 0 0 0-5-5H9a5 5 0 0 0-5 5V21"/><circle cx="12" cy="7.5" r="4"/></svg></a><a class="btn btn--primary" href="/appointment.html">Записаться</a>
+      <button class="burger" id="burger" aria-label="Открыть меню" aria-expanded="false" aria-controls="nav"><span></span></button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+  <section class="e404">
+    <div class="container">
+      <div class="e404__code">404</div>
+      <h1>Страница не найдена</h1>
+      <p class="e404__lead">Возможно, страница переехала или адрес набран с ошибкой. Ниже — самые нужные разделы клиники.</p>
+
+      <div class="e404__actions">
+        <a class="btn btn--primary" href="/index.html">На главную <svg><use href="#i-arrow"/></svg></a>
+        <a class="btn btn--ghost" href="tel:+74951204567"><svg><use href="#i-phone"/></svg> +7 (495) 120-45-67</a>
+      </div>
+
+      <div class="e404__links">
+        <a class="e404__link" href="/services.html"><b>Услуги и цены</b><span>35 услуг, 8 направлений</span></a>
+        <a class="e404__link" href="/doctors.html"><b>Врачи</b><span>48 специалистов</span></a>
+        <a class="e404__link" href="/appointment.html"><b>Запись на приём</b><span>онлайн за 2 минуты</span></a>
+        <a class="e404__link" href="/contacts.html"><b>Контакты</b><span>4 филиала в Москве</span></a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer__bottom" style="border-top:0">
+      <span>© <span data-year>2026</span> ООО «МЕДИКА». Лицензия ЛО-77-01-019283</span>
+      <span>Сайт носит демонстрационный характер</span>
+      <span class="footer__disclaimer">Имеются противопоказания. Необходима консультация специалиста.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="/assets/js/main.js"></script>
+</body>
+</html>

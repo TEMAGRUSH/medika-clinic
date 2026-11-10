@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Личный кабинет — клиника МЕДИКА</title>
+<meta name="description" content="Личный кабинет пациента клиники МЕДИКА: записи к врачу, результаты анализов, документы и назначения.">
+<meta name="robots" content="noindex">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<a class="skip-link" href="#main">Перейти к содержимому</a>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <symbol id="i-logo" viewBox="0 0 24 24"><path d="M9.5 3.5h5v5.5H20v5h-5.5V20h-5v-5.5H4v-5h5.5z"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path d="M20.5 10.3c0 6.4-8.5 11.7-8.5 11.7s-8.5-5.3-8.5-11.7a8.5 8.5 0 0 1 17 0z"/><circle cx="12" cy="10.3" r="3"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15.5 14"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></symbol>
+  <symbol id="i-user" viewBox="0 0 24 24"><path d="M20 21v-1.6a5 5 0 0 0-5-5H9a5 5 0 0 0-5 5V21"/><circle cx="12" cy="7.5" r="4"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><line x1="4" y1="12" x2="19" y2="12"/><polyline points="13 6 19 12 13 18"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24"><path d="M21 16.9v2.6a2 2 0 0 1-2.2 2 19.5 19.5 0 0 1-8.5-3 19.2 19.2 0 0 1-5.9-5.9 19.5 19.5 0 0 1-3-8.6A2 2 0 0 1 3.4 2H6a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L7.1 9.9a15.7 15.7 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="3"/><polyline points="4 7 12 13 20 7"/></symbol>
+  <symbol id="i-send" viewBox="0 0 24 24"><path d="M22 2 11 13"/><path d="M22 2l-7 20-4-9-9-4z"/></symbol>
+  <symbol id="i-message" viewBox="0 0 24 24"><path d="M21 11.5a8.5 8.5 0 0 1-12.6 7.4L3 21l2.1-5.4A8.5 8.5 0 1 1 21 11.5z"/></symbol>
+  <symbol id="i-calendar" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="3"/><line x1="8" y1="3" x2="8" y2="7"/><line x1="16" y1="3" x2="16" y2="7"/><line x1="3" y1="10" x2="21" y2="10"/></symbol>
+  <symbol id="i-file" viewBox="0 0 24 24"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><polyline points="14 3 14 8 19 8"/><line x1="9" y1="13" x2="15" y2="13"/><line x1="9" y1="17" x2="13" y2="17"/></symbol>
+  <symbol id="i-flask" viewBox="0 0 24 24"><path d="M9 3h6"/><path d="M10 3v5.2L5.6 17A2 2 0 0 0 7.3 20h9.4a2 2 0 0 0 1.7-3L14 8.2V3"/><line x1="7.5" y1="14" x2="16.5" y2="14"/></symbol>
+  <symbol id="i-pill" viewBox="0 0 24 24"><rect x="2.5" y="8.5" width="19" height="7" rx="3.5" transform="rotate(-45 12 12)"/><line x1="8.5" y1="8.5" x2="15.5" y2="15.5"/></symbol>
+  <symbol id="i-video" viewBox="0 0 24 24"><rect x="2.5" y="6" width="13" height="12" rx="3"/><polyline points="15.5 10.5 21.5 7.5 21.5 16.5 15.5 13.5"/></symbol>
+  <symbol id="i-download" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></symbol>
+  <symbol id="i-close" viewBox="0 0 24 24"><line x1="6" y1="6" x2="18" y2="18"/><line x1="18" y1="6" x2="6" y2="18"/></symbol>
+  <symbol id="i-out" viewBox="0 0 24 24"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 21s7-3.5 7-9V5.5L12 3 5 5.5V12c0 5.5 7 9 7 9z"/><polyline points="9 12 11 14 15 10"/></symbol>
+</svg>
+
+<div class="topbar">
+  <div class="container topbar__inner">
+    <span class="topbar__item">
+      <svg><use href="#i-pin"/></svg> Москва, 4 филиала
+    </span>
+    <span class="topbar__item topbar__item--hide">
+      <svg><use href="#i-clock"/></svg> Ежедневно 8:00–22:00
+    </span>
+    <span class="topbar__spacer"></span>
+    <a href="tel:+74951204567">+7 (495) 120-45-67</a>
+    <span class="topbar__item topbar__lic topbar__item--hide">Лицензия ЛО-77-01-019283</span>
+  </div>
+</div>
+
+<header class="header" id="header">
+  <div class="container header__inner">
+    <a class="logo" href="index.html" aria-label="МЕДИКА — на главную">
+      <span class="logo__mark"><svg><use href="#i-logo"/></svg></span>
+      <span class="logo__text">
+        <span class="logo__name">МЕДИКА</span>
+        <span class="logo__tag">клиника семейной медицины</span>
+      </span>
+    </a>
+
+    <nav class="nav" id="nav" aria-label="Основная навигация">
+      <a class="nav__link" href="index.html">Главная</a>
+      <a class="nav__link" href="services.html">Услуги</a>
+      <a class="nav__link" href="doctors.html">Врачи</a>
+      <a class="nav__link" href="telemedicine.html">Телемедицина</a>
+      <a class="nav__link" href="library.html">Библиотека</a>
+      <a class="nav__link" href="contacts.html">Контакты</a>
+    </nav>
+
+    <div class="header__actions">
+      <div class="header__phone">
+        <span>Запись 24/7</span>
+        <a href="tel:+74951204567">+7 (495) 120-45-67</a>
+      </div>
+      <a class="header__account is-auth" href="account.html" aria-label="Личный кабинет" title="Личный кабинет">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 21v-1.6a5 5 0 0 0-5-5H9a5 5 0 0 0-5 5V21"/><circle cx="12" cy="7.5" r="4"/></svg>
+      </a>
+      <a class="btn btn--primary" href="appointment.html">Записаться</a>
+      <button class="burger" id="burger" aria-label="Открыть меню" aria-expanded="false" aria-controls="nav">
+        <span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+  <section class="section">
+    <div class="container cabinet">
+
+      <aside class="cabinet__aside">
+        <div class="profile-card">
+          <div class="profile-card__top">
+            <div class="profile-card__avatar" id="profileInitials">ИС</div>
+            <div>
+              <span class="profile-card__name" id="profileName">Ирина Соколова</span>
+              <span class="profile-card__meta" id="profilePhone">+7 (495) 120-45-67</span>
+            </div>
+          </div>
+          <div class="profile-card__tags">
+            <span class="tag tag--green">ДМС «Согаз»</span>
+            <span class="tag">С 2019 года</span>
+          </div>
+        </div>
+
+        <nav class="cabinet__nav" aria-label="Разделы кабинета">
+          <button class="cabinet__link is-active" data-tab="overview" type="button">
+            <svg><use href="#i-logo"/></svg> Обзор
+          </button>
+          <button class="cabinet__link" data-tab="appointments" type="button">
+            <svg><use href="#i-calendar"/></svg> Мои записи <span class="count" id="countAppts">2</span>
+          </button>
+          <button class="cabinet__link" data-tab="results" type="button">
+            <svg><use href="#i-flask"/></svg> Результаты
+          </button>
+          <button class="cabinet__link" data-tab="documents" type="button">
+            <svg><use href="#i-file"/></svg> Документы
+          </button>
+          <button class="cabinet__link" data-tab="prescriptions" type="button">
+            <svg><use href="#i-pill"/></svg> Назначения
+          </button>
+          <button class="cabinet__link" data-tab="profile" type="button">
+            <svg><use href="#i-user"/></svg> Профиль
+          </button>
+        </nav>
+
+        <div class="cabinet__help">
+          <b>Нужна помощь?</b>
+          Администратор ответит за 30 секунд.<br>
+          <a href="tel:+74951204567">+7 (495) 120-45-67</a>
+        </div>
+
+        <button class="btn btn--ghost btn--block" id="logoutBtn" type="button">
+          <svg style="width:16px;height:16px"><use href="#i-out"/></svg> Выйти
+        </button>
+      </aside>
+
+      <div class="cabinet__main">
+        <div class="cabinet__head">
+          <h1 id="greeting">Здравствуйте, Ирина</h1>
+          <p>Здесь собраны ваши записи, результаты и документы. Что-нибудь нужно уточнить — звоните, мы на связи.</p>
+        </div>
+
+        <section data-panel="overview">
+          <div class="panel">
+            <div class="panel__head">
+              <h2 class="panel__title">Ближайший приём</h2>
+              <a class="panel__link" href="appointment.html">Записаться ещё</a>
+            </div>
+            <div id="nextAppt"></div>
+          </div>
+
+          <div class="panel">
+            <div class="panel__head">
+              <h2 class="panel__title">Быстрые действия</h2>
+            </div>
+            <div class="tile-grid">
+              <a class="tile" href="appointment.html">
+                <span class="tile__icon"><svg><use href="#i-calendar"/></svg></span>
+                <span><b>Записаться к врачу</b><span>Свободно 46 окон на этой неделе</span></span>
+              </a>
+              <a class="tile" href="telemedicine.html">
+                <span class="tile__icon"><svg><use href="#i-video"/></svg></span>
+                <span><b>Онлайн-консультация</b><span>Врач на связи с 8:00 до 22:00</span></span>
+              </a>
+              <a class="tile" href="#results" data-tab-link="results">
+                <span class="tile__icon"><svg><use href="#i-flask"/></svg></span>
+                <span><b>Результаты анализов</b><span>2 новых заключения</span></span>
+              </a>
+              <a class="tile" href="#prescriptions" data-tab-link="prescriptions">
+                <span class="tile__icon"><svg><use href="#i-pill"/></svg></span>
+                <span><b>Назначения врача</b><span>Активен 1 курс лечения</span></span>
+              </a>
+            </div>
+          </div>
+
+          <div class="panel">
+            <div class="panel__head">
+              <h2 class="panel__title">Что взять на приём</h2>
+            </div>
+            <ul class="checklist">
+              <li><svg><use href="#i-check"/></svg> Паспорт или другой документ с фотографией</li>
+              <li><svg><use href="#i-check"/></svg> Полис ДМС, если приём идёт по страховке</li>
+              <li><svg><use href="#i-check"/></svg> Результаты обследований за последний год — если они на руках</li>
+            </ul>
+          </div>
+        </section>
+
+        <section data-panel="appointments" hidden>
+          <div class="panel">
+            <div class="panel__head">
+              <h2 class="panel__title">Мои записи</h2>
+              <a class="panel__link" href="appointment.html">Новая запись</a>
+            </div>
+            <div id="apptList"></div>
+          </div>
+        </section>
+
+        <section data-panel="results" hidden>
+          <div class="panel">
+            <div class="panel__head">
+              <h2 class="panel__title">Результаты анализов</h2>
+              <span class="tag">Обновлено 7 ноября</span>
+            </div>
+            <div class="row-list" id="resultsList"></div>
+          </div>
+        </section>
+
+        <section data-panel="documents" hidden>
+          <div class="panel">
+            <div class="panel__head">
+              <h2 class="panel__title">Документы</h2>
+              <span class="tag">Храним 5 лет</span>
+            </div>
+            <div class="row-list" id="docsList"></div>
+          </div>
+        </section>
+
+        <section data-panel="prescriptions" hidden>
+          <div class="panel">
+            <div class="panel__head">
+              <h2 class="panel__title">Назначения и рекомендации</h2>
+              <span class="tag tag--green">Активный курс</span>
+            </div>
+            <div id="rxList"></div>
+          </div>
+        </section>
+
+        <section data-panel="profile" hidden>
+          <div class="panel">
+            <div class="panel__head">
+              <h2 class="panel__title">Личные данные</h2>
+            </div>
+            <form id="profileForm" novalidate>
+              <div class="form-row">
+                <div class="field">
+                  <label for="pfName">Имя и фамилия</label>
+                  <input class="input" id="pfName" type="text" autocomplete="name">
+                </div>
+                <div class="field">
+                  <label for="pfPhone">Телефон</label>
+                  <input class="input" id="pfPhone" type="tel" data-phone autocomplete="tel">
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="field">
+                  <label for="pfEmail">E-mail</label>
+                  <input class="input" id="pfEmail" type="email" autocomplete="email">
+                </div>
+                <div class="field">
+                  <label for="pfBirth">Дата рождения</label>
+                  <input class="input" id="pfBirth" type="date">
+                </div>
+              </div>
+              <div class="field">
+                <label for="pfAllergy">Аллергии и хронические состояния</label>
+                <textarea class="textarea" id="pfAllergy" rows="3" placeholder="Например: аллергия на пенициллин"></textarea>
+              </div>
+              <button class="btn btn--primary" type="submit">Сохранить изменения</button>
+            </form>
+          </div>
+        </section>
+      </div>
+
+    </div>
+  </section>
+</main>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer__grid">
+      <div>
+        <a class="logo" href="index.html">
+          <span class="logo__mark"><svg><use href="#i-logo"/></svg></span>
+          <span class="logo__text">
+            <span class="logo__name">МЕДИКА</span>
+            <span class="logo__tag">клиника семейной медицины</span>
+          </span>
+        </a>
+        <p class="footer__about">Четыре филиала в Москве, 48 врачей и собственная диагностическая база. Работаем с 2014 года.</p>
+        <div class="socials">
+          <a href="#" aria-label="Telegram"><svg><use href="#i-send"/></svg></a>
+          <a href="#" aria-label="WhatsApp"><svg><use href="#i-message"/></svg></a>
+          <a href="tel:+74951204567" aria-label="Позвонить"><svg><use href="#i-phone"/></svg></a>
+          <a href="mailto:info@medika-clinic.ru" aria-label="Написать письмо"><svg><use href="#i-mail"/></svg></a>
+        </div>
+      </div>
+
+      <div>
+        <h4>Клиника</h4>
+        <ul>
+          <li><a href="services.html">Услуги и цены</a></li>
+          <li><a href="doctors.html">Врачи</a></li>
+          <li><a href="contacts.html">Филиалы</a></li>
+          <li><a href="appointment.html">Запись на приём</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4>Пациентам</h4>
+        <ul>
+          <li><a href="account.html">Личный кабинет</a></li>
+          <li><a href="account.html#results">Результаты анализов</a></li>
+          <li><a href="telemedicine.html">Телемедицина</a></li>
+          <li><a href="library.html">Библиотека здоровья</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4>Контакты</h4>
+        <a class="footer__phone" href="tel:+74951204567">+7 (495) 120-45-67</a>
+        <ul style="margin-top:14px">
+          <li><a href="mailto:info@medika-clinic.ru">info@medika-clinic.ru</a></li>
+          <li>Москва, Малая Бронная, 12</li>
+          <li>Ежедневно 8:00–22:00</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer__bottom">
+      <span>© <span data-year>2026</span> ООО «МЕДИКА». Лицензия ЛО-77-01-019283</span>
+      <span>Сайт носит демонстрационный характер</span>
+      <span class="footer__disclaimer">Имеются противопоказания. Необходима консультация специалиста. Информация на сайте не является публичной офертой.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/main.js"></script>
+<script src="assets/js/auth.js"></script>
+</body>
+</html>

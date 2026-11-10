@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Запись на приём — клиника МЕДИКА</title>
+<meta name="description" content="Онлайн-запись в клинику МЕДИКА: выберите направление, врача, дату и время. Подтверждение по телефону в течение 7 минут.">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<a class="skip-link" href="#main">Перейти к содержимому</a>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <symbol id="i-logo" viewBox="0 0 24 24"><path d="M9.6 3.5h4.8v5.3h5.1v4.8h-5.1v6.9H9.6v-6.9H4.5V8.8h5.1z"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24"><path d="M21 16.9v2.6a2 2 0 0 1-2.2 2 19.6 19.6 0 0 1-8.5-3 19.3 19.3 0 0 1-6-6A19.6 19.6 0 0 1 1.3 4a2 2 0 0 1 2-2.2h2.6a2 2 0 0 1 2 1.7c.1 1 .4 2 .7 2.9a2 2 0 0 1-.5 2.1L7 9.7a15.9 15.9 0 0 0 6 6l1.2-1.2a2 2 0 0 1 2.1-.4c.9.3 1.9.6 2.9.7a2 2 0 0 1 1.8 2z" transform="translate(0 1)"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15.5 14"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><line x1="4" y1="12" x2="19" y2="12"/><polyline points="13 6 19 12 13 18"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></symbol>
+  <symbol id="i-check-circle" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><polyline points="8 12.2 11 15.2 16 9.5"/></symbol>
+  <symbol id="i-calendar" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="3"/><line x1="8" y1="3" x2="8" y2="7"/><line x1="16" y1="3" x2="16" y2="7"/><line x1="3" y1="10" x2="21" y2="10"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="3"/><polyline points="4 7.5 12 13 20 7.5"/></symbol>
+  <symbol id="i-send" viewBox="0 0 24 24"><path d="M22 2 11 13"/><path d="M22 2l-7 20-4-9-9-4z"/></symbol>
+  <symbol id="i-message" viewBox="0 0 24 24"><path d="M21 11.5a8.5 8.5 0 0 1-12.6 7.4L3 21l2.1-5.4A8.5 8.5 0 1 1 21 11.5z"/></symbol>
+  <symbol id="i-info" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><line x1="12" y1="11" x2="12" y2="16"/><line x1="12" y1="8" x2="12.01" y2="8"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 21s7-3.5 7-9V5.5L12 3 5 5.5V12c0 5.5 7 9 7 9z"/><polyline points="9 11.5 11.2 13.7 15.2 9.7"/></symbol>
+  <symbol id="i-heart" viewBox="0 0 24 24"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1.1-1.1a5.5 5.5 0 0 0-7.8 7.8l8.9 8.9 8.9-8.9a5.5 5.5 0 0 0 0-7.8z"/></symbol>
+  <symbol id="i-activity" viewBox="0 0 24 24"><polyline points="22 12 17.5 12 15 20 9 4 6.5 12 2 12"/></symbol>
+  <symbol id="i-smile" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></symbol>
+  <symbol id="i-venus" viewBox="0 0 24 24"><circle cx="12" cy="8.5" r="5"/><line x1="12" y1="13.5" x2="12" y2="21"/><line x1="9" y1="18" x2="15" y2="18"/></symbol>
+  <symbol id="i-tooth" viewBox="0 0 24 24"><path d="M12 3.2c-2.9 0-4.9 1.9-4.9 4.7 0 1.9.5 2.8 1 4.6.3 1.5.5 2.7.8 4.2.2 1 .7 1.5 1.3 1.5.6 0 1-.5 1.2-1.4l.5-2.9c.2-.9.5-1.5.8-1.5s.6.6.8 1.5l.5 2.9c.2.9.6 1.4 1.2 1.4.6 0 1.1-.5 1.3-1.5.3-1.5.5-2.7.8-4.2.5-1.8 1-2.7 1-4.6 0-2.8-2-4.7-4.9-4.7z"/></symbol>
+  <symbol id="i-droplet" viewBox="0 0 24 24"><path d="M12 3s6 5.7 6 10a6 6 0 0 1-12 0c0-4.3 6-10 6-10z"/></symbol>
+  <symbol id="i-scan" viewBox="0 0 24 24"><path d="M3 8V5.5A2.5 2.5 0 0 1 5.5 3H8"/><path d="M16 3h2.5A2.5 2.5 0 0 1 21 5.5V8"/><path d="M21 16v2.5a2.5 2.5 0 0 1-2.5 2.5H16"/><path d="M8 21H5.5A2.5 2.5 0 0 1 3 18.5V16"/><line x1="8" y1="12" x2="16" y2="12"/><line x1="12" y1="8" x2="12" y2="16"/></symbol>
+  <symbol id="i-award" viewBox="0 0 24 24"><circle cx="12" cy="9" r="5.5"/><polyline points="8.5 13.6 7 22 12 19.4 17 22 15.5 13.6"/></symbol>
+  <symbol id="i-file" viewBox="0 0 24 24"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><polyline points="14 3 14 8 19 8"/><line x1="8.5" y1="13" x2="15.5" y2="13"/><line x1="8.5" y1="17" x2="13" y2="17"/></symbol>
+  <symbol id="i-user" viewBox="0 0 24 24"><path d="M20 21v-1.5a5 5 0 0 0-5-5H9a5 5 0 0 0-5 5V21"/><circle cx="12" cy="7.5" r="4"/></symbol>
+</svg>
+
+<div class="topbar">
+  <div class="container topbar__inner">
+    <span class="topbar__item"><svg><use href="#i-pin"/></svg> Москва, 4 филиала</span>
+    <span class="topbar__item topbar__item--hide"><svg><use href="#i-clock"/></svg> Ежедневно 8:00–22:00</span>
+    <span class="topbar__spacer"></span>
+    <a href="tel:+74951204567">+7 (495) 120-45-67</a>
+    <span class="topbar__item topbar__lic topbar__item--hide">Лицензия ЛО-77-01-019283</span>
+  </div>
+</div>
+
+<header class="header" id="header">
+  <div class="container header__inner">
+    <a class="logo" href="index.html" aria-label="МЕДИКА — на главную">
+      <span class="logo__mark"><svg><use href="#i-logo"/></svg></span>
+      <span class="logo__text">
+        <span class="logo__name">МЕДИКА</span>
+        <span class="logo__tag">клиника семейной медицины</span>
+      </span>
+    </a>
+    <nav class="nav" id="nav" aria-label="Основная навигация">
+      <a class="nav__link" href="index.html">Главная</a>
+      <a class="nav__link" href="services.html">Услуги</a>
+      <a class="nav__link" href="doctors.html">Врачи</a>
+      <a class="nav__link" href="telemedicine.html">Телемедицина</a>
+      <a class="nav__link" href="library.html">Библиотека</a>
+      <a class="nav__link" href="contacts.html">Контакты</a>
+    </nav>
+    <div class="header__actions">
+      <div class="header__phone">
+        <span>Запись 24/7</span>
+        <a href="tel:+74951204567">+7 (495) 120-45-67</a>
+      </div>
+      <a class="header__account" href="account.html" aria-label="Личный кабинет" title="Личный кабинет">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 21v-1.6a5 5 0 0 0-5-5H9a5 5 0 0 0-5 5V21"/><circle cx="12" cy="7.5" r="4"/></svg>
+      </a>
+      <a class="btn btn--primary" href="appointment.html">Записаться</a>
+      <button class="burger" id="burger" aria-label="Открыть меню" aria-expanded="false" aria-controls="nav"><span></span></button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+  <section class="page-hero">
+    <div class="container">
+      <ol class="breadcrumbs">
+        <li><a href="index.html">Главная</a></li>
+        <li>Запись на приём</li>
+      </ol>
+      <h1>Запись на приём</h1>
+      <p class="page-hero__lead">Четыре шага и две минуты. Администратор перезвонит в течение 7 минут, чтобы подтвердить время и ответить на вопросы.</p>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top:36px">
+    <div class="container">
+      <div class="booking" id="booking">
+
+        <div class="booking__panel">
+          <h2 id="bookTitle" style="font-size:1.45rem;margin-bottom:22px">Что вас беспокоит?</h2>
+
+          <ol class="stepper">
+            <li class="stepper__item is-active" data-step-label="1"><span class="stepper__num">1</span><span>Направление</span></li>
+            <li class="stepper__item" data-step-label="2"><span class="stepper__num">2</span><span>Врач</span></li>
+            <li class="stepper__item" data-step-label="3"><span class="stepper__num">3</span><span>Время</span></li>
+            <li class="stepper__item" data-step-label="4"><span class="stepper__num">4</span><span>Данные</span></li>
+          </ol>
+
+          <div id="bookSteps">
+
+            <!-- Шаг 1 -->
+            <div class="book-step is-active" data-step="1">
+              <p class="book-step__hint" id="step1Hint">Выберите направление — покажем врачей и свободные окна.</p>
+              <div class="choice-grid">
+                <label class="choice">
+                  <input type="radio" name="specialty" value="therapist">
+                  <span class="choice__box">
+                    <span class="choice__icon"><svg><use href="#i-shield"/></svg></span>
+                    <span class="choice__title">Терапия</span>
+                    <span class="choice__sub">от 2 400 ₽</span>
+                  </span>
+                </label>
+                <label class="choice">
+                  <input type="radio" name="specialty" value="cardiology">
+                  <span class="choice__box">
+                    <span class="choice__icon"><svg><use href="#i-heart"/></svg></span>
+                    <span class="choice__title">Кардиология</span>
+                    <span class="choice__sub">от 3 200 ₽</span>
+                  </span>
+                </label>
+                <label class="choice">
+                  <input type="radio" name="specialty" value="neurology">
+                  <span class="choice__box">
+                    <span class="choice__icon"><svg><use href="#i-activity"/></svg></span>
+                    <span class="choice__title">Неврология</span>
+                    <span class="choice__sub">от 3 100 ₽</span>
+                  </span>
+                </label>
+                <label class="choice">
+                  <input type="radio" name="specialty" value="pediatrics">
+                  <span class="choice__box">
+                    <span class="choice__icon"><svg><use href="#i-smile"/></svg></span>
+                    <span class="choice__title">Педиатрия</span>
+                    <span class="choice__sub">от 2 600 ₽</span>
+                  </span>
+                </label>
+                <label class="choice">
+                  <input type="radio" name="specialty" value="gynecology">
+                  <span class="choice__box">
+                    <span class="choice__icon"><svg><use href="#i-venus"/></svg></span>
+                    <span class="choice__title">Гинекология</span>
+                    <span class="choice__sub">от 3 000 ₽</span>
+                  </span>
+                </label>
+                <label class="choice">
+                  <input type="radio" name="specialty" value="orthopedics">
+                  <span class="choice__box">
+                    <span class="choice__icon"><svg><use href="#i-tooth"/></svg></span>
+                    <span class="choice__title">Ортопедия</span>
+                    <span class="choice__sub">от 3 400 ₽</span>
+                  </span>
+                </label>
+                <label class="choice">
+                  <input type="radio" name="specialty" value="gastro">
+                  <span class="choice__box">
+                    <span class="choice__icon"><svg><use href="#i-droplet"/></svg></span>
+                    <span class="choice__title">Гастроэнтерология</span>
+                    <span class="choice__sub">от 3 300 ₽</span>
+                  </span>
+                </label>
+                <label class="choice">
+                  <input type="radio" name="specialty" value="diagnostics">
+                  <span class="choice__box">
+                    <span class="choice__icon"><svg><use href="#i-scan"/></svg></span>
+                    <span class="choice__title">Диагностика</span>
+                    <span class="choice__sub">от 900 ₽</span>
+                  </span>
+                </label>
+                <label class="choice">
+                  <input type="radio" name="specialty" value="therapist">
+                  <span class="choice__box">
+                    <span class="choice__icon"><svg><use href="#i-info"/></svg></span>
+                    <span class="choice__title">Не знаю</span>
+                    <span class="choice__sub">поможем выбрать</span>
+                  </span>
+                </label>
+              </div>
+            </div>
+
+            <!-- Шаг 2 -->
+            <div class="book-step" data-step="2">
+              <p class="book-step__hint" id="step2Hint">Выберите врача или доверьтесь администратору — подберём свободного специалиста.</p>
+              <div class="doctor-choice" id="doctorList"></div>
+            </div>
+
+            <!-- Шаг 3 -->
+            <div class="book-step" data-step="3">
+              <p class="book-step__hint" id="step3Hint">Ближайшие две недели. Серые окна уже заняты.</p>
+              <div class="days" id="days" aria-label="Дата приёма"></div>
+              <div class="slots" id="slots" aria-label="Время приёма"></div>
+              <p class="slots__legend">Не подходит ни одно время? Позвоните — найдём другой день или врача.</p>
+            </div>
+
+            <!-- Шаг 4 -->
+            <div class="book-step" data-step="4">
+              <p class="book-step__hint">Оставьте контакты — администратор подтвердит запись и пришлёт памятку.</p>
+              <form id="bookingForm" novalidate>
+                <div class="field">
+                  <label for="bkName">Фамилия и имя <span class="req">*</span></label>
+                  <input class="input" id="bkName" type="text" placeholder="Иванова Мария" autocomplete="name" data-required>
+                  <span class="error-msg">Заполните это поле</span>
+                </div>
+                <div class="form-row">
+                  <div class="field">
+                    <label for="bkPhone">Телефон <span class="req">*</span></label>
+                    <input class="input" id="bkPhone" type="tel" placeholder="+7 (___) ___-__-__" autocomplete="tel" data-required>
+                    <span class="error-msg">Введите номер полностью</span>
+                  </div>
+                  <div class="field">
+                    <label for="bkEmail">E-mail</label>
+                    <input class="input" id="bkEmail" type="email" placeholder="mail@example.com" autocomplete="email">
+                    <span class="error-msg">Проверьте адрес</span>
+                  </div>
+                </div>
+                <div class="field">
+                  <label for="branchSelect">Филиал</label>
+                  <select class="select" id="branchSelect">
+                    <option>Патриаршие пруды</option>
+                    <option>Сокол</option>
+                    <option>Ясенево</option>
+                    <option>Покровка (детский)</option>
+                  </select>
+                </div>
+                <div class="field">
+                  <label for="bkComment">Комментарий</label>
+                  <textarea class="textarea" id="bkComment" placeholder="Что важно знать врачу: жалобы, аллергии, принимаемые препараты"></textarea>
+                </div>
+                <div class="field field--check">
+                  <label class="checkbox">
+                    <input type="checkbox" id="bkConsent" data-required>
+                    <span>Согласен с политикой обработки персональных данных и получением SMS о записи</span>
+                  </label>
+                  <span class="error-msg">Отметьте согласие, чтобы продолжить</span>
+                </div>
+              </form>
+            </div>
+
+          </div>
+
+          <div class="booking__nav">
+            <button class="btn btn--ghost" id="prevBtn" type="button">Назад</button>
+            <button class="btn btn--primary" id="nextBtn" type="button">Далее</button>
+          </div>
+
+          <div class="booking-success" id="bookingSuccess" role="status">
+            <div class="booking-success__icon"><svg><use href="#i-check"/></svg></div>
+            <h2>Заявка на запись принята</h2>
+            <p>Администратор перезвонит в течение 7 минут в рабочее время (8:00–22:00), подтвердит время и пришлёт памятку.</p>
+            <div class="booking-code" id="bookCode">МД-0000</div>
+            <p>
+              <b id="successDoctor">Врач</b><br>
+              <span id="successDate">Дата</span><br>
+              <span id="successBranch">Филиал</span>
+            </p>
+            <div style="display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:22px">
+              <a class="btn btn--ghost" href="index.html">На главную</a>
+              <a class="btn btn--primary" href="appointment.html">Записаться ещё раз</a>
+            </div>
+          </div>
+        </div>
+
+        <aside class="summary">
+          <h3>Ваша запись</h3>
+          <dl style="margin:0">
+            <div class="summary__row"><dt>Направление</dt><dd id="sumSpec">Не выбрано</dd></div>
+            <div class="summary__row"><dt>Врач</dt><dd id="sumDoctor">Не выбран</dd></div>
+            <div class="summary__row"><dt>Дата</dt><dd id="sumDate">Не выбрана</dd></div>
+            <div class="summary__row"><dt>Время</dt><dd id="sumTime">Не выбрано</dd></div>
+            <div class="summary__row"><dt>Филиал</dt><dd id="branchValue">Патриаршие пруды</dd></div>
+          </dl>
+          <div class="summary__total"><span>Стоимость приёма</span><b id="sumPrice">—</b></div>
+          <div class="summary__note">Оплата на месте или по ДМС. Отменить или перенести запись можно бесплатно за 3 часа до приёма.</div>
+          <a class="btn btn--plain" href="tel:+74951204567" style="margin-top:14px"><svg><use href="#i-phone"/></svg> +7 (495) 120-45-67</a>
+        </aside>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--soft">
+    <div class="container">
+      <div class="section-head">
+        <div class="section-head__text">
+          <span class="kicker">Перед приёмом</span>
+          <h2>Что взять с собой</h2>
+        </div>
+      </div>
+      <div class="cards cards--3">
+        <div class="service-card">
+          <span class="service-card__icon"><svg><use href="#i-file"/></svg></span>
+          <h3>Документы</h3>
+          <p>Паспорт и полис ДМС, если приём идёт по страховке. Для ребёнка — свидетельство о рождении.</p>
+        </div>
+        <div class="service-card">
+          <span class="service-card__icon"><svg><use href="#i-scan"/></svg></span>
+          <h3>Результаты обследований</h3>
+          <p>Снимки, анализы и заключения других клиник за последний год — на диске или в распечатке.</p>
+        </div>
+        <div class="service-card">
+          <span class="service-card__icon"><svg><use href="#i-clock"/></svg></span>
+          <h3>15 минут запаса</h3>
+          <p>Приходите за 15 минут до приёма: нужно время на оформление и заполнение анкеты здоровья.</p>
+        </div>
+      </div>
+      <div class="lead-note" style="margin-top:28px">
+        <svg><use href="#i-user"/></svg>
+        <span>Если вы записываете другого человека, укажите в комментарии его имя и дату рождения — это нужно для корректного оформления карты.</span>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer__grid">
+      <div>
+        <a class="logo" href="index.html">
+          <span class="logo__mark"><svg><use href="#i-logo"/></svg></span>
+          <span class="logo__text">
+            <span class="logo__name">МЕДИКА</span>
+            <span class="logo__tag">клиника семейной медицины</span>
+          </span>
+        </a>
+        <p class="footer__about">Четыре филиала в Москве, 48 врачей и собственная диагностическая база. Работаем с 2014 года.</p>
+        <div class="socials">
+          <a href="#" aria-label="Telegram"><svg><use href="#i-send"/></svg></a>
+          <a href="#" aria-label="WhatsApp"><svg><use href="#i-message"/></svg></a>
+          <a href="tel:+74951204567" aria-label="Позвонить"><svg><use href="#i-phone"/></svg></a>
+          <a href="mailto:info@medika-clinic.ru" aria-label="Написать письмо"><svg><use href="#i-mail"/></svg></a>
+        </div>
+      </div>
+      <div>
+        <h4>Клиника</h4>
+        <ul>
+          <li><a href="services.html">Услуги и цены</a></li>
+          <li><a href="doctors.html">Врачи</a></li>
+          <li><a href="contacts.html">Филиалы</a></li>
+          <li><a href="appointment.html">Запись на приём</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Пациентам</h4>
+        <ul>
+          <li><a href="account.html">Личный кабинет</a></li>
+          <li><a href="account.html#results">Результаты анализов</a></li>
+          <li><a href="telemedicine.html">Телемедицина</a></li>
+          <li><a href="library.html">Библиотека здоровья</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Контакты</h4>
+        <a class="footer__phone" href="tel:+74951204567">+7 (495) 120-45-67</a>
+        <ul style="margin-top:14px">
+          <li><a href="mailto:info@medika-clinic.ru">info@medika-clinic.ru</a></li>
+          <li>Москва, Малая Бронная, 12</li>
+          <li>Ежедневно 8:00–22:00</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <span>© <span data-year>2026</span> ООО «МЕДИКА». Лицензия ЛО-77-01-019283</span>
+      <span>Сайт носит демонстрационный характер</span>
+      <span class="footer__disclaimer">Имеются противопоказания. Необходима консультация специалиста. Информация на сайте не является публичной офертой.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/main.js"></script>
+<script src="assets/js/auth.js"></script>
+<script src="assets/js/booking.js"></script>
+</body>
+</html>

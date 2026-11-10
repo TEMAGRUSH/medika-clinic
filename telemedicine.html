@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Телемедицина — онлайн-консультации врачей | МЕДИКА</title>
+<meta name="description" content="Видеоконсультации с врачами клиники МЕДИКА: терапевт, кардиолог, невролог, педиатр. Приём за 15 минут, заключение и назначения в личном кабинете.">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<a class="skip-link" href="#main">Перейти к содержимому</a>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <symbol id="i-logo" viewBox="0 0 24 24"><path d="M9.5 3.5h5v5.5H20v5h-5.5V20h-5v-5.5H4v-5h5.5z"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path d="M20.5 10.3c0 6.4-8.5 11.7-8.5 11.7s-8.5-5.3-8.5-11.7a8.5 8.5 0 0 1 17 0z"/><circle cx="12" cy="10.3" r="3"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15.5 14"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 21s7-3.5 7-9V5.5L12 3 5 5.5V12c0 5.5 7 9 7 9z"/><polyline points="9 12 11 14 15 10"/></symbol>
+  <symbol id="i-user" viewBox="0 0 24 24"><path d="M20 21v-1.6a5 5 0 0 0-5-5H9a5 5 0 0 0-5 5V21"/><circle cx="12" cy="7.5" r="4"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><line x1="4" y1="12" x2="19" y2="12"/><polyline points="13 6 19 12 13 18"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24"><path d="M21 16.9v2.6a2 2 0 0 1-2.2 2 19.5 19.5 0 0 1-8.5-3 19.2 19.2 0 0 1-5.9-5.9 19.5 19.5 0 0 1-3-8.6A2 2 0 0 1 3.4 2H6a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L7.1 9.9a15.7 15.7 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="3"/><polyline points="4 7 12 13 20 7"/></symbol>
+  <symbol id="i-send" viewBox="0 0 24 24"><path d="M22 2 11 13"/><path d="M22 2l-7 20-4-9-9-4z"/></symbol>
+  <symbol id="i-message" viewBox="0 0 24 24"><path d="M21 11.5a8.5 8.5 0 0 1-12.6 7.4L3 21l2.1-5.4A8.5 8.5 0 1 1 21 11.5z"/></symbol>
+  <symbol id="i-video" viewBox="0 0 24 24"><rect x="2.5" y="6" width="13" height="12" rx="3"/><polyline points="15.5 10.5 21.5 7.5 21.5 16.5 15.5 13.5"/></symbol>
+  <symbol id="i-mic" viewBox="0 0 24 24"><rect x="9" y="2.5" width="6" height="11" rx="3"/><path d="M5.5 11a6.5 6.5 0 0 0 13 0"/><line x1="12" y1="17.5" x2="12" y2="21"/></symbol>
+  <symbol id="i-file" viewBox="0 0 24 24"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><polyline points="14 3 14 8 19 8"/><line x1="9" y1="13" x2="15" y2="13"/><line x1="9" y1="17" x2="13" y2="17"/></symbol>
+  <symbol id="i-alert" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><line x1="12" y1="7.5" x2="12" y2="13"/><line x1="12" y1="16.5" x2="12.01" y2="16.5"/></symbol>
+</svg>
+
+<div class="topbar">
+  <div class="container topbar__inner">
+    <span class="topbar__item">
+      <svg><use href="#i-pin"/></svg> Москва, 4 филиала
+    </span>
+    <span class="topbar__item topbar__item--hide">
+      <svg><use href="#i-clock"/></svg> Ежедневно 8:00–22:00
+    </span>
+    <span class="topbar__spacer"></span>
+    <a href="tel:+74951204567">+7 (495) 120-45-67</a>
+    <span class="topbar__item topbar__lic topbar__item--hide">Лицензия ЛО-77-01-019283</span>
+  </div>
+</div>
+
+<header class="header" id="header">
+  <div class="container header__inner">
+    <a class="logo" href="index.html" aria-label="МЕДИКА — на главную">
+      <span class="logo__mark"><svg><use href="#i-logo"/></svg></span>
+      <span class="logo__text">
+        <span class="logo__name">МЕДИКА</span>
+        <span class="logo__tag">клиника семейной медицины</span>
+      </span>
+    </a>
+
+    <nav class="nav" id="nav" aria-label="Основная навигация">
+      <a class="nav__link" href="index.html">Главная</a>
+      <a class="nav__link" href="services.html">Услуги</a>
+      <a class="nav__link" href="doctors.html">Врачи</a>
+      <a class="nav__link is-active" href="telemedicine.html">Телемедицина</a>
+      <a class="nav__link" href="library.html">Библиотека</a>
+      <a class="nav__link" href="contacts.html">Контакты</a>
+    </nav>
+
+    <div class="header__actions">
+      <div class="header__phone">
+        <span>Запись 24/7</span>
+        <a href="tel:+74951204567">+7 (495) 120-45-67</a>
+      </div>
+      <a class="header__account" href="account.html" aria-label="Личный кабинет" title="Личный кабинет">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 21v-1.6a5 5 0 0 0-5-5H9a5 5 0 0 0-5 5V21"/><circle cx="12" cy="7.5" r="4"/></svg>
+      </a>
+      <a class="btn btn--primary" href="appointment.html">Записаться</a>
+      <button class="burger" id="burger" aria-label="Открыть меню" aria-expanded="false" aria-controls="nav">
+        <span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+  <section class="page-hero">
+    <div class="container">
+      <ol class="breadcrumbs">
+        <li><a href="index.html">Главная</a></li>
+        <li><span>/</span></li>
+        <li>Телемедицина</li>
+      </ol>
+      <h1>Телемедицина</h1>
+      <p class="page-hero__lead">Видеоконсультация с врачом клиники за 15 минут — без дороги, очередей и ожидания в коридоре. Заключение и назначения сразу попадают в личный кабинет.</p>
+      <div class="page-hero__meta">
+        <span><svg><use href="#i-clock"/></svg> Среднее ожидание — 15 минут</span>
+        <span><svg><use href="#i-video"/></svg> Приём 30 минут</span>
+        <span><svg><use href="#i-file"/></svg> Запись хранится 30 дней</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container split">
+      <div class="split__body">
+        <span class="kicker">Формат приёма</span>
+        <h2>Приём, который помещается в перерыв</h2>
+        <p class="lead">Врач видит вашу историю в карте, задаёт вопросы и разбирает результаты обследований. Если понадобится осмотр или УЗИ — выпишет направление в удобный филиал, и его можно пройти в тот же день.</p>
+
+        <ul class="checklist">
+          <li><svg><use href="#i-check"/></svg> Подключение в браузере — без установки приложений</li>
+          <li><svg><use href="#i-check"/></svg> Второе мнение по уже поставленному диагнозу</li>
+          <li><svg><use href="#i-check"/></svg> Электронный рецепт и больничный лист</li>
+          <li><svg><use href="#i-check"/></svg> Расшифровка анализов с планом действий</li>
+        </ul>
+
+        <div class="hero__actions" style="margin-top:24px">
+          <a class="btn btn--primary" href="appointment.html?spec=therapist">Записаться на приём <svg><use href="#i-arrow"/></svg></a>
+          <a class="btn btn--ghost" href="account.html">Войти в кабинет</a>
+        </div>
+      </div>
+
+      <div class="split__media">
+        <div class="video">
+          <div class="video__screen">
+            <img src="assets/img/doctor-sokolova.jpg" alt="Врач на видеоконсультации">
+            <div class="video__self">
+              <img src="assets/img/hero.jpg" alt="Изображение с камеры пациента">
+            </div>
+            <span class="video__label"><span class="pulse-dot"></span> Соколова И. В. · 04:12</span>
+          </div>
+          <div class="video__bar">
+            <button class="video__btn" type="button" aria-label="Микрофон"><svg><use href="#i-mic"/></svg></button>
+            <button class="video__btn" type="button" aria-label="Камера"><svg><use href="#i-video"/></svg></button>
+            <button class="video__btn" type="button" aria-label="Чат"><svg><use href="#i-message"/></svg></button>
+            <button class="video__btn video__btn--end" type="button" aria-label="Завершить"><svg><use href="#i-phone"/></svg></button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--soft">
+    <div class="container">
+      <div class="section-head">
+        <div class="section-head__text">
+          <span class="kicker">Порядок действий</span>
+          <h2>Четыре шага до врача</h2>
+        </div>
+        <p style="max-width:360px;color:var(--muted);font-size:.9375rem;margin:0">От заявки до назначений — обычно 20–25 минут. Если врач задерживается, администратор предупредит в СМС.</p>
+      </div>
+
+      <div class="steps">
+        <div class="step reveal">
+          <div class="step__num">1</div>
+          <h3>Заявка</h3>
+          <p>Выберите специалиста и удобное время. Оплата картой на сайте или по ДМС.</p>
+        </div>
+        <div class="step reveal">
+          <div class="step__num">2</div>
+          <h3>Ссылка на приём</h3>
+          <p>За 15 минут до начала придёт СМС со ссылкой. Проверьте камеру и звук.</p>
+        </div>
+        <div class="step reveal">
+          <div class="step__num">3</div>
+          <h3>Консультация</h3>
+          <p>30 минут разговора с врачом. Можно прикрепить фото документов прямо в чат.</p>
+        </div>
+        <div class="step reveal">
+          <div class="step__num">4</div>
+          <h3>Документы</h3>
+          <p>Заключение, назначения и рецепт появятся в личном кабинете в течение часа.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <div class="section-head__text">
+          <span class="kicker">Стоимость</span>
+          <h2>Тарифы онлайн-консультаций</h2>
+        </div>
+        <a class="section-head__link" href="services.html">Полный прайс <svg><use href="#i-arrow"/></svg></a>
+      </div>
+
+      <div class="cards cards--3">
+        <div class="price-card">
+          <h3 class="price-card__name">Разовая консультация</h3>
+          <p class="price-card__desc">Один приём у специалиста, если вопрос уже известен</p>
+          <div class="price-card__sum">2 900 ₽</div>
+          <ul class="price-card__list">
+            <li><svg><use href="#i-check"/></svg> 30 минут с врачом</li>
+            <li><svg><use href="#i-check"/></svg> Заключение в кабинете</li>
+            <li><svg><use href="#i-check"/></svg> Электронный рецепт</li>
+          </ul>
+          <a class="btn btn--ghost btn--block" href="appointment.html?spec=therapist">Выбрать время</a>
+        </div>
+
+        <div class="price-card price-card--accent">
+          <span class="price-card__badge">Выбирают чаще</span>
+          <h3 class="price-card__name">Пакет «Наблюдение»</h3>
+          <p class="price-card__desc">Три консультации одного врача в течение месяца</p>
+          <div class="price-card__sum">7 500 ₽ <small>вместо 8 700 ₽</small></div>
+          <ul class="price-card__list">
+            <li><svg><use href="#i-check"/></svg> 3 приёма по 30 минут</li>
+            <li><svg><use href="#i-check"/></svg> Чат с врачом между приёмами</li>
+            <li><svg><use href="#i-check"/></svg> Корректировка лечения</li>
+            <li><svg><use href="#i-check"/></svg> Приоритетная запись</li>
+          </ul>
+          <a class="btn btn--primary btn--block" href="appointment.html?spec=therapist">Оформить пакет</a>
+        </div>
+
+        <div class="price-card">
+          <h3 class="price-card__name">Годовая программа</h3>
+          <p class="price-card__desc">Для семьи: до 4 человек, неограниченные консультации</p>
+          <div class="price-card__sum">24 900 ₽ <small>в год</small></div>
+          <ul class="price-card__list">
+            <li><svg><use href="#i-check"/></svg> Неограниченные приёмы онлайн</li>
+            <li><svg><use href="#i-check"/></svg> Второе мнение по любому случаю</li>
+            <li><svg><use href="#i-check"/></svg> Скидка 15% на анализы</li>
+            <li><svg><use href="#i-check"/></svg> Персональный координатор</li>
+          </ul>
+          <a class="btn btn--ghost btn--block" href="contacts.html">Обсудить программу</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--soft">
+    <div class="container">
+      <div class="section-head">
+        <div class="section-head__text">
+          <span class="kicker">Показания</span>
+          <h2>Когда онлайн — подходящий формат</h2>
+        </div>
+      </div>
+
+      <div class="check-cols">
+        <div class="check-col">
+          <h3><svg style="width:20px;height:20px;color:var(--green)"><use href="#i-check"/></svg> Можно решить дистанционно</h3>
+          <ul>
+            <li><svg><use href="#i-check"/></svg> Расшифровка анализов и обследований</li>
+            <li><svg><use href="#i-check"/></svg> Подбор и корректировка терапии</li>
+            <li><svg><use href="#i-check"/></svg> Повторный приём после очного визита</li>
+            <li><svg><use href="#i-check"/></svg> Простуда, ОРВИ без тяжёлых симптомов</li>
+            <li><svg><use href="#i-check"/></svg> Второе мнение перед операцией</li>
+            <li><svg><use href="#i-check"/></svg> Вопросы по питанию, сну и профилактике</li>
+          </ul>
+        </div>
+
+        <div class="check-col check-col--warn">
+          <h3><svg style="width:20px;height:20px;color:var(--accent)"><use href="#i-alert"/></svg> Нужен очный приём</h3>
+          <ul>
+            <li><svg><use href="#i-alert"/></svg> Боль в груди, одышка, потеря сознания</li>
+            <li><svg><use href="#i-alert"/></svg> Температура выше 39 °C, которая не снижается</li>
+            <li><svg><use href="#i-alert"/></svg> Острая боль в животе, травмы, кровотечения</li>
+            <li><svg><use href="#i-alert"/></svg> Подозрение на инсульт или инфаркт — звоните 103</li>
+            <li><svg><use href="#i-alert"/></svg> Состояния, требующие осмотра и УЗИ</li>
+          </ul>
+        </div>
+      </div>
+
+      <p class="lead-note" style="margin-top:18px">
+        <svg style="width:18px;height:18px"><use href="#i-shield"/></svg>
+        Телемедицина не заменяет очный приём. При угрожающих симптомах звоните 103 — не ждите консультации.
+      </p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <div class="section-head__text">
+          <span class="kicker">Врачи</span>
+          <h2>На связи сегодня</h2>
+        </div>
+        <a class="section-head__link" href="doctors.html">Все специалисты <svg><use href="#i-arrow"/></svg></a>
+      </div>
+
+      <div class="cards cards--3">
+        <article class="doctor-card">
+          <div class="doctor-card__photo">
+            <span class="online-badge"><span class="pulse-dot"></span> Онлайн</span>
+            <img src="assets/img/doctor-sokolova.jpg" alt="Соколова Ирина Валерьевна, кардиолог" width="720" height="1080">
+          </div>
+          <div class="doctor-card__body">
+            <h3>Соколова Ирина Валерьевна</h3>
+            <div class="doctor-card__spec">Кардиолог</div>
+            <div class="doctor-card__meta">
+              <span class="tag">стаж 18 лет</span>
+              <span class="tag tag--green">к.м.н.</span>
+            </div>
+            <div class="doctor-card__foot">
+              <span style="font-size:.8125rem;color:var(--muted)">Ближайшее окно: сегодня 18:30</span>
+              <a class="btn btn--ghost btn--sm" href="appointment.html?doctor=sokolova">Записаться</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="doctor-card">
+          <div class="doctor-card__photo">
+            <span class="online-badge"><span class="pulse-dot"></span> Онлайн</span>
+            <img src="assets/img/doctor-danilov.jpg" alt="Данилов Артём Игоревич, терапевт" width="720" height="1080">
+          </div>
+          <div class="doctor-card__body">
+            <h3>Данилов Артём Игоревич</h3>
+            <div class="doctor-card__spec">Терапевт, гастроэнтеролог</div>
+            <div class="doctor-card__meta">
+              <span class="tag">стаж 9 лет</span>
+              <span class="tag">СРК</span>
+            </div>
+            <div class="doctor-card__foot">
+              <span style="font-size:.8125rem;color:var(--muted)">Ближайшее окно: сегодня 20:00</span>
+              <a class="btn btn--ghost btn--sm" href="appointment.html?doctor=danilov">Записаться</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="doctor-card">
+          <div class="doctor-card__photo">
+            <img src="assets/img/doctor-morozova.jpg" alt="Морозова Анна Сергеевна, педиатр" width="720" height="1080">
+          </div>
+          <div class="doctor-card__body">
+            <h3>Морозова Анна Сергеевна</h3>
+            <div class="doctor-card__spec">Педиатр</div>
+            <div class="doctor-card__meta">
+              <span class="tag">стаж 11 лет</span>
+              <span class="tag tag--green">дети с 0+</span>
+            </div>
+            <div class="doctor-card__foot">
+              <span style="font-size:.8125rem;color:var(--muted)">Ближайшее окно: завтра 09:30</span>
+              <a class="btn btn--ghost btn--sm" href="appointment.html?doctor=morozova">Записаться</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer__grid">
+      <div>
+        <a class="logo" href="index.html">
+          <span class="logo__mark"><svg><use href="#i-logo"/></svg></span>
+          <span class="logo__text">
+            <span class="logo__name">МЕДИКА</span>
+            <span class="logo__tag">клиника семейной медицины</span>
+          </span>
+        </a>
+        <p class="footer__about">Четыре филиала в Москве, 48 врачей и собственная диагностическая база. Работаем с 2014 года.</p>
+        <div class="socials">
+          <a href="#" aria-label="Telegram"><svg><use href="#i-send"/></svg></a>
+          <a href="#" aria-label="WhatsApp"><svg><use href="#i-message"/></svg></a>
+          <a href="tel:+74951204567" aria-label="Позвонить"><svg><use href="#i-phone"/></svg></a>
+          <a href="mailto:info@medika-clinic.ru" aria-label="Написать письмо"><svg><use href="#i-mail"/></svg></a>
+        </div>
+      </div>
+
+      <div>
+        <h4>Клиника</h4>
+        <ul>
+          <li><a href="services.html">Услуги и цены</a></li>
+          <li><a href="doctors.html">Врачи</a></li>
+          <li><a href="contacts.html">Филиалы</a></li>
+          <li><a href="appointment.html">Запись на приём</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4>Пациентам</h4>
+        <ul>
+          <li><a href="account.html">Личный кабинет</a></li>
+          <li><a href="account.html#results">Результаты анализов</a></li>
+          <li><a href="telemedicine.html">Телемедицина</a></li>
+          <li><a href="library.html">Библиотека здоровья</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4>Контакты</h4>
+        <a class="footer__phone" href="tel:+74951204567">+7 (495) 120-45-67</a>
+        <ul style="margin-top:14px">
+          <li><a href="mailto:info@medika-clinic.ru">info@medika-clinic.ru</a></li>
+          <li>Москва, Малая Бронная, 12</li>
+          <li>Ежедневно 8:00–22:00</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer__bottom">
+      <span>© <span data-year>2026</span> ООО «МЕДИКА». Лицензия ЛО-77-01-019283</span>
+      <span>Сайт носит демонстрационный характер</span>
+      <span class="footer__disclaimer">Имеются противопоказания. Необходима консультация специалиста. Информация на сайте не является публичной офертой.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/main.js"></script>
+<script src="assets/js/auth.js"></script>
+</body>
+</html>

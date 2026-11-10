@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Вход в личный кабинет — клиника МЕДИКА</title>
+<meta name="description" content="Личный кабинет пациента клиники МЕДИКА: записи, результаты анализов, документы и назначения врача в одном месте.">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<a class="skip-link" href="#main">Перейти к содержимому</a>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <symbol id="i-logo" viewBox="0 0 24 24"><path d="M9.5 3.5h5v5.5H20v5h-5.5V20h-5v-5.5H4v-5h5.5z"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path d="M20.5 10.3c0 6.4-8.5 11.7-8.5 11.7s-8.5-5.3-8.5-11.7a8.5 8.5 0 0 1 17 0z"/><circle cx="12" cy="10.3" r="3"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15.5 14"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 21s7-3.5 7-9V5.5L12 3 5 5.5V12c0 5.5 7 9 7 9z"/><polyline points="9 12 11 14 15 10"/></symbol>
+  <symbol id="i-user" viewBox="0 0 24 24"><path d="M20 21v-1.6a5 5 0 0 0-5-5H9a5 5 0 0 0-5 5V21"/><circle cx="12" cy="7.5" r="4"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><line x1="4" y1="12" x2="19" y2="12"/><polyline points="13 6 19 12 13 18"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24"><path d="M21 16.9v2.6a2 2 0 0 1-2.2 2 19.5 19.5 0 0 1-8.5-3 19.2 19.2 0 0 1-5.9-5.9 19.5 19.5 0 0 1-3-8.6A2 2 0 0 1 3.4 2H6a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L7.1 9.9a15.7 15.7 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="3"/><polyline points="4 7 12 13 20 7"/></symbol>
+  <symbol id="i-send" viewBox="0 0 24 24"><path d="M22 2 11 13"/><path d="M22 2l-7 20-4-9-9-4z"/></symbol>
+  <symbol id="i-message" viewBox="0 0 24 24"><path d="M21 11.5a8.5 8.5 0 0 1-12.6 7.4L3 21l2.1-5.4A8.5 8.5 0 1 1 21 11.5z"/></symbol>
+  <symbol id="i-lock" viewBox="0 0 24 24"><rect x="4" y="10" width="16" height="11" rx="3"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></symbol>
+</svg>
+
+<div class="topbar">
+  <div class="container topbar__inner">
+    <span class="topbar__item">
+      <svg><use href="#i-pin"/></svg> Москва, 4 филиала
+    </span>
+    <span class="topbar__item topbar__item--hide">
+      <svg><use href="#i-clock"/></svg> Ежедневно 8:00–22:00
+    </span>
+    <span class="topbar__spacer"></span>
+    <a href="tel:+74951204567">+7 (495) 120-45-67</a>
+    <span class="topbar__item topbar__lic topbar__item--hide">Лицензия ЛО-77-01-019283</span>
+  </div>
+</div>
+
+<header class="header" id="header">
+  <div class="container header__inner">
+    <a class="logo" href="index.html" aria-label="МЕДИКА — на главную">
+      <span class="logo__mark"><svg><use href="#i-logo"/></svg></span>
+      <span class="logo__text">
+        <span class="logo__name">МЕДИКА</span>
+        <span class="logo__tag">клиника семейной медицины</span>
+      </span>
+    </a>
+
+    <nav class="nav" id="nav" aria-label="Основная навигация">
+      <a class="nav__link" href="index.html">Главная</a>
+      <a class="nav__link" href="services.html">Услуги</a>
+      <a class="nav__link" href="doctors.html">Врачи</a>
+      <a class="nav__link" href="telemedicine.html">Телемедицина</a>
+      <a class="nav__link" href="library.html">Библиотека</a>
+      <a class="nav__link" href="contacts.html">Контакты</a>
+    </nav>
+
+    <div class="header__actions">
+      <div class="header__phone">
+        <span>Запись 24/7</span>
+        <a href="tel:+74951204567">+7 (495) 120-45-67</a>
+      </div>
+      <a class="header__account" href="account.html" aria-label="Личный кабинет" title="Личный кабинет">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 21v-1.6a5 5 0 0 0-5-5H9a5 5 0 0 0-5 5V21"/><circle cx="12" cy="7.5" r="4"/></svg>
+      </a>
+      <a class="btn btn--primary" href="appointment.html">Записаться</a>
+      <button class="burger" id="burger" aria-label="Открыть меню" aria-expanded="false" aria-controls="nav">
+        <span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+  <section class="auth">
+    <div class="container auth__inner">
+
+      <aside class="auth__aside">
+        <div>
+          <span class="kicker" style="color:#8fd3ff">Личный кабинет</span>
+          <h1 class="auth__title">Все документы и записи — в одном месте</h1>
+          <p class="auth__text">Кабинет создаётся автоматически после первого визита. Вход по номеру телефона, без паролей и приложений.</p>
+        </div>
+
+        <ul class="auth__list">
+          <li><svg><use href="#i-check"/></svg> Результаты анализов и заключения — сразу после готовности</li>
+          <li><svg><use href="#i-check"/></svg> Записи к врачу: перенос и отмена без звонка администратору</li>
+          <li><svg><use href="#i-check"/></svg> Назначения, дозировки и напоминания о приёме лекарств</li>
+          <li><svg><use href="#i-check"/></svg> Справки и чеки для налогового вычета</li>
+        </ul>
+
+        <div class="auth__stats">
+          <div class="auth__stat"><b>24/7</b><span>доступ к документам</span></div>
+          <div class="auth__stat"><b>5 лет</b><span>храним историю</span></div>
+          <div class="auth__stat"><b>152-ФЗ</b><span>защита данных</span></div>
+        </div>
+      </aside>
+
+      <div class="auth__card">
+        <h2 id="authTitle">Вход в кабинет</h2>
+        <p class="auth__sub">Введите номер телефона или e-mail, указанный при записи.</p>
+
+        <form id="loginForm" novalidate>
+          <div class="field">
+            <label for="loginId">Телефон или e-mail <span class="req">*</span></label>
+            <input class="input" id="loginId" name="loginId" type="text" inputmode="tel" autocomplete="username" placeholder="+7 (___) ___-__-__ или mail@example.com">
+            <span class="error-msg" id="loginIdError" hidden></span>
+          </div>
+
+          <div class="field" id="codeField" hidden>
+            <label for="loginCode">Код из СМС <span class="req">*</span></label>
+            <div class="code-row">
+              <input class="input" id="loginCode" name="loginCode" type="text" inputmode="numeric" maxlength="4" autocomplete="one-time-code" placeholder="••••">
+            </div>
+            <span class="error-msg" id="loginCodeError" hidden></span>
+          </div>
+
+          <button class="btn btn--primary btn--block" id="loginBtn" type="submit" style="margin-top:6px">Получить код</button>
+        </form>
+
+        <p class="auth__hint" id="loginHint">
+          Демо-режим: подойдёт любой телефон, код подтверждения — <b>1234</b>.
+        </p>
+
+        <div class="auth__divider">или</div>
+
+        <button class="btn btn--ghost btn--block" id="demoLogin" type="button">Войти в демо-кабинет</button>
+
+        <p class="auth__note">
+          Нет кабинета? <a href="appointment.html">Запишитесь на приём</a> — доступ придёт в СМС после визита.
+        </p>
+      </div>
+
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer__grid">
+      <div>
+        <a class="logo" href="index.html">
+          <span class="logo__mark"><svg><use href="#i-logo"/></svg></span>
+          <span class="logo__text">
+            <span class="logo__name">МЕДИКА</span>
+            <span class="logo__tag">клиника семейной медицины</span>
+          </span>
+        </a>
+        <p class="footer__about">Четыре филиала в Москве, 48 врачей и собственная диагностическая база. Работаем с 2014 года.</p>
+        <div class="socials">
+          <a href="#" aria-label="Telegram"><svg><use href="#i-send"/></svg></a>
+          <a href="#" aria-label="WhatsApp"><svg><use href="#i-message"/></svg></a>
+          <a href="tel:+74951204567" aria-label="Позвонить"><svg><use href="#i-phone"/></svg></a>
+          <a href="mailto:info@medika-clinic.ru" aria-label="Написать письмо"><svg><use href="#i-mail"/></svg></a>
+        </div>
+      </div>
+
+      <div>
+        <h4>Клиника</h4>
+        <ul>
+          <li><a href="services.html">Услуги и цены</a></li>
+          <li><a href="doctors.html">Врачи</a></li>
+          <li><a href="contacts.html">Филиалы</a></li>
+          <li><a href="appointment.html">Запись на приём</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4>Пациентам</h4>
+        <ul>
+          <li><a href="account.html">Личный кабинет</a></li>
+          <li><a href="account.html#results">Результаты анализов</a></li>
+          <li><a href="telemedicine.html">Телемедицина</a></li>
+          <li><a href="library.html">Библиотека здоровья</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4>Контакты</h4>
+        <a class="footer__phone" href="tel:+74951204567">+7 (495) 120-45-67</a>
+        <ul style="margin-top:14px">
+          <li><a href="mailto:info@medika-clinic.ru">info@medika-clinic.ru</a></li>
+          <li>Москва, Малая Бронная, 12</li>
+          <li>Ежедневно 8:00–22:00</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer__bottom">
+      <span>© <span data-year>2026</span> ООО «МЕДИКА». Лицензия ЛО-77-01-019283</span>
+      <span>Сайт носит демонстрационный характер</span>
+      <span class="footer__disclaimer">Имеются противопоказания. Необходима консультация специалиста. Информация на сайте не является публичной офертой.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/main.js"></script>
+<script src="assets/js/auth.js"></script>
+</body>
+</html>
