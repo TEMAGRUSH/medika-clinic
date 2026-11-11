@@ -325,3 +325,33 @@ html.a11y .slot[disabled],
 html.a11y .day[disabled] { opacity: 0.45; }
 html.a11y .slot[disabled] { text-decoration: line-through; }
 html.a11y ::placeholder { color: var(--a-fg) !important; opacity: 0.7; }
+
+/* ============ fixes: large font, wrap, image-off layout ============ */
+html.a11y .header__inner { flex-wrap: wrap; row-gap: 10px; height: auto; }
+html.a11y .header__actions { flex-wrap: wrap; row-gap: 10px; row-gap: 10px; }
+html.a11y .nav { flex-wrap: wrap; row-gap: 6px; }
+html.a11y .logo { flex: none; }
+
+html.a11y[data-images="off"] .hero__inner,
+html.a11y[data-images="off"] .split { grid-template-columns: 1fr !important; }
+html.a11y[data-images="off"] .split__media { display: none !important; }
+
+html.a11y .days { overflow: visible !important; flex-wrap: wrap; }
+html.a11y .summary { position: static; }
+
+html.a11y .topbar,
+html.a11y .stats,
+html.a11y .footer,
+html.a11y .cta-band {
+  background-color: transparent !important;
+  border-top: 1px solid var(--a-fg) !important;
+  border-bottom: 1px solid var(--a-fg) !important;
+}
+html.a11y .topbar *,
+html.a11y .stats *,
+html.a11y .footer *,
+html.a11y .cta-band * { color: var(--a-fg) !important; }
+
+@media (max-width: 900px) {
+  html.a11y .header__phone { display: none; }
+}
