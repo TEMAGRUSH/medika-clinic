@@ -1,0 +1,327 @@
+/* ============================================================
+   MEDIKA — версия для слабовидящих
+   Панель настроек + переопределение палитры
+   ============================================================ */
+
+/* ---------- Кнопка в шапке ---------- */
+.a11y-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  padding: 0;
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  background: #fff;
+  color: var(--ink-2);
+  cursor: pointer;
+  transition: border-color 0.2s, color 0.2s, background 0.2s;
+  flex: none;
+}
+.a11y-toggle:hover { border-color: var(--brand-500); color: var(--brand-700); }
+.a11y-toggle svg { width: 21px; height: 21px; stroke-width: 1.7; }
+html.a11y .a11y-toggle {
+  background: #000 !important;
+  color: #fff !important;
+  border-color: #000 !important;
+}
+
+/* ---------- Панель ---------- */
+.a11y-panel {
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 1200;
+  display: flex;
+  flex-direction: column;
+  width: 372px;
+  max-width: 100%;
+  height: 100%;
+  padding: 0;
+  background: #fff;
+  border-left: 1px solid #e3eaf1;
+  box-shadow: -24px 0 60px rgba(11, 27, 43, 0.18);
+  transform: translateX(102%);
+  transition: transform 0.32s cubic-bezier(0.22, 0.61, 0.36, 1);
+  visibility: hidden;
+}
+.a11y-panel.is-open { transform: translateX(0); visibility: visible; }
+
+.a11y-panel__head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 20px 22px 16px;
+  border-bottom: 1px solid #eef3f7;
+}
+.a11y-panel__title { margin: 0; font-size: 1.0625rem; font-weight: 700; color: #0b1b2b; }
+.a11y-panel__close {
+  width: 36px;
+  height: 36px;
+  display: grid;
+  place-items: center;
+  border: 1px solid #e3eaf1;
+  border-radius: 50%;
+  background: #fff;
+  color: #3b4e60;
+  cursor: pointer;
+}
+.a11y-panel__close:hover { border-color: #1880c7; color: #0e4a79; }
+.a11y-panel__close svg { width: 16px; height: 16px; }
+
+.a11y-panel__body { padding: 6px 22px 22px; overflow-y: auto; }
+
+.a11y-group { padding: 18px 0; border-bottom: 1px solid #f1f5f9; }
+.a11y-group:last-of-type { border-bottom: 0; }
+.a11y-group__label {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #64788a;
+}
+
+.a11y-row { display: flex; gap: 8px; flex-wrap: wrap; }
+
+.a11y-chip {
+  min-width: 46px;
+  height: 42px;
+  padding: 0 12px;
+  border: 1px solid #dbe4ed;
+  border-radius: 10px;
+  background: #fff;
+  color: #0b1b2b;
+  font-size: 0.875rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.18s;
+}
+.a11y-chip:hover { border-color: #1880c7; }
+.a11y-chip[aria-pressed="true"] {
+  background: #082742;
+  border-color: #082742;
+  color: #fff;
+}
+.a11y-chip--a1 { font-size: 0.8125rem; }
+.a11y-chip--a2 { font-size: 1rem; }
+.a11y-chip--a3 { font-size: 1.25rem; }
+
+.a11y-scheme {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #dbe4ed;
+  border-radius: 10px;
+  background: #fff;
+  cursor: pointer;
+  text-align: left;
+  transition: all 0.18s;
+}
+.a11y-scheme:hover { border-color: #1880c7; }
+.a11y-scheme[aria-pressed="true"] { border-color: #082742; box-shadow: inset 0 0 0 1px #082742; }
+.a11y-scheme__swatch {
+  width: 32px;
+  height: 32px;
+  border-radius: 7px;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  display: grid;
+  place-items: center;
+  font-size: 0.75rem;
+  font-weight: 700;
+  flex: none;
+}
+.a11y-scheme__name { font-size: 0.875rem; color: #0b1b2b; }
+
+.a11y-panel__actions {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding-top: 18px;
+}
+.a11y-panel__reset {
+  width: 100%;
+  height: 44px;
+  border: 1px solid #082742;
+  border-radius: 10px;
+  background: #082742;
+  color: #fff;
+  font-size: 0.9375rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+.a11y-panel__reset:hover { background: #0b3355; }
+
+/* ============================================================
+   Режим для слабовидящих
+   ============================================================ */
+html.a11y { --a-bg: #ffffff; --a-fg: #000000; }
+html.a11y[data-scheme="wb"] { --a-bg: #000000; --a-fg: #ffffff; }
+html.a11y[data-scheme="blue"] { --a-bg: #9dd1ff; --a-fg: #002f52; }
+html.a11y[data-scheme="beige"] { --a-bg: #f3e9d2; --a-fg: #3a2b12; }
+
+html.a11y[data-size="2"] { font-size: 115%; }
+html.a11y[data-size="3"] { font-size: 130%; }
+
+/* база */
+html.a11y,
+html.a11y body {
+  background: var(--a-bg) !important;
+  background-image: none !important;
+}
+html.a11y body,
+html.a11y body * {
+  color: var(--a-fg) !important;
+  background-color: transparent !important;
+  background-image: none !important;
+  box-shadow: none !important;
+  text-shadow: none !important;
+  border-color: var(--a-fg) !important;
+  -webkit-text-fill-color: currentColor;
+}
+html.a11y body { line-height: 1.75; }
+html.a11y[data-spacing="on"] body { letter-spacing: 0.09em; word-spacing: 0.16em; }
+
+html.a11y h1, html.a11y h2, html.a11y h3, html.a11y h4 {
+  letter-spacing: 0 !important;
+  line-height: 1.25 !important;
+}
+
+html.a11y a { text-decoration: underline !important; text-underline-offset: 0.18em; }
+html.a11y :focus-visible { outline: 3px solid var(--a-fg) !important; outline-offset: 3px; }
+
+/* инверсные блоки: кнопки, тёмные секции, активные состояния */
+html.a11y .btn--primary,
+html.a11y .btn--dark,
+html.a11y .topbar,
+html.a11y .stats,
+html.a11y .footer,
+html.a11y .cta-band,
+html.a11y .slot.is-active,
+html.a11y .day.is-active,
+html.a11y .filter.is-active,
+html.a11y .stepper__num,
+html.a11y .a11y-panel__reset,
+html.a11y .header__account,
+html.a11y .modal__close {
+  background-color: var(--a-fg) !important;
+  border-color: var(--a-fg) !important;
+}
+html.a11y .btn--primary,
+html.a11y .btn--primary *,
+html.a11y .btn--dark,
+html.a11y .btn--dark *,
+html.a11y .topbar,
+html.a11y .topbar *,
+html.a11y .stats,
+html.a11y .stats *,
+html.a11y .footer,
+html.a11y .footer *,
+html.a11y .cta-band *,
+html.a11y .slot.is-active,
+html.a11y .day.is-active,
+html.a11y .filter.is-active,
+html.a11y .stepper__num,
+html.a11y .a11y-panel__reset,
+html.a11y .header__account svg,
+html.a11y .modal__close svg {
+  color: var(--a-bg) !important;
+}
+
+/* рамки вместо теней */
+html.a11y .service-card,
+html.a11y .doctor-card,
+html.a11y .review,
+html.a11y .faq,
+html.a11y .form-card,
+html.a11y .summary,
+html.a11y .booking__panel,
+html.a11y .modal__panel,
+html.a11y .choice__box,
+html.a11y .day,
+html.a11y .slot,
+html.a11y .input,
+html.a11y .select,
+html.a11y .filter,
+html.a11y .branch,
+html.a11y .toolbar,
+html.a11y .trust,
+html.a11y .search,
+html.a11y .pill {
+  border: 1px solid var(--a-fg) !important;
+}
+
+html.a11y .modal__overlay { background-color: rgba(0, 0, 0, 0.55) !important; }
+
+/* размеры под крупный шрифт */
+html.a11y .header__inner { height: auto; min-height: 76px; padding: 10px 0; }
+html.a11y .btn,
+html.a11y .filter,
+html.a11y .day,
+html.a11y .slot,
+html.a11y .input,
+html.a11y .field input,
+html.a11y .field select,
+html.a11y .field textarea {
+  height: auto;
+  min-height: 46px;
+  white-space: normal;
+}
+html.a11y .day { width: auto; min-width: 76px; }
+html.a11y .stepper { flex-wrap: wrap; row-gap: 8px; }
+
+/* изображения */
+html.a11y img,
+html.a11y .map svg { filter: grayscale(1) contrast(1.1); }
+html.a11y[data-images="off"] img,
+html.a11y[data-images="off"] .map,
+html.a11y[data-images="off"] .doctor-card__photo,
+html.a11y[data-images="off"] .hero__media,
+html.a11y[data-images="off"] .split__media {
+  display: none !important;
+}
+
+/* панель не подчиняется общей инверсии */
+html.a11y .a11y-panel,
+html.a11y .a11y-panel * {
+  color: #0b1b2b !important;
+  border-color: #dbe4ed !important;
+}
+html.a11y .a11y-panel { background-color: #fff !important; }
+html.a11y .a11y-panel__title,
+html.a11y .a11y-panel__title * { color: #0b1b2b !important; }
+html.a11y .a11y-panel__close { background-color: #fff !important; color: #0b1b2b !important; }
+html.a11y .a11y-panel .a11y-chip[aria-pressed="true"],
+html.a11y .a11y-panel .a11y-panel__reset {
+  background-color: #082742 !important;
+  border-color: #082742 !important;
+  color: #fff !important;
+}
+html.a11y .a11y-panel .a11y-scheme[aria-pressed="true"] { border-color: #082742 !important; }
+
+@media (max-width: 560px) {
+  .a11y-panel { width: 100%; }
+  .a11y-toggle { width: 38px; height: 38px; }
+}
+
+/* --- solid surfaces that must stay opaque in a11y mode --- */
+html.a11y .header,
+html.a11y .modal__panel,
+html.a11y .a11y-panel,
+html.a11y .input,
+html.a11y .field input,
+html.a11y .field select,
+html.a11y .field textarea,
+html.a11y select {
+  background-color: var(--a-bg) !important;
+}
+html.a11y .header { border-bottom: 1px solid var(--a-fg) !important; }
+html.a11y .slot[disabled],
+html.a11y .day[disabled] { opacity: 0.45; }
+html.a11y .slot[disabled] { text-decoration: line-through; }
+html.a11y ::placeholder { color: var(--a-fg) !important; opacity: 0.7; }
